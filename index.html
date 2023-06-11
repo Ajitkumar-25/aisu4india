@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
   </head>
 
   <body>
@@ -98,17 +99,28 @@
             </div>
     
             <div class="formbold-textarea">
-                <textarea
+                <!-- <textarea
                     rows="6"
                     name="message"
                     id="message"
                     placeholder="Write About the post in detail..."
                     class="formbold-form-input"
-                ></textarea>
+                ></textarea> -->
+
+                <textarea name="message" id="message" class="formbold-form-input" >
+                  &lt;p&gt;This is some sample content.&lt;/p&gt;
+              </textarea>
+              <script>
+                ClassicEditor
+                    .create( document.querySelector( '#message' ) )
+                    .catch( error => {
+                        console.error( error );
+                    } );
+            </script>
                 <label for="message" class="formbold-form-label">Post Details </label>
             </div>
     
-            <div class="formbold-input-file">Upload files (optional)
+            <div class="formbold-input-file"><h4>Upload files (optional)</h4>
               <label for="file" class="formbold-input-label">
                   <input type="file" name="upload" id="file">
               </label>
