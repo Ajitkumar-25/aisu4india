@@ -13,7 +13,7 @@
 		// username => root
 		// password => empty
 		// database name => staff
-		$conn = mysqli_connect("localhost:3306", "vdwbqkap_wp607", "Ssm821115@", "Pressrelease");
+		$conn = mysqli_connect("localhost:3306", "vdwbqkap_wp607", "Ssm821115@", "vdwbqkap_wp607");
 		
 		// Check connection
 		if($conn === false){
@@ -31,7 +31,7 @@
 		
 		// Performing insert query execution
 		// here our table name is college
-		$sql = "INSERT INTO college VALUES ('$firstname',
+		$sql = "INSERT INTO Pressrelease VALUES ('$firstname',
 			'$lastname','$category','$date','$message', '$upload')";
 		
 		if(mysqli_query($conn, $sql)){
