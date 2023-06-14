@@ -13,7 +13,7 @@
 		// username => root
 		// password => empty
 		// database name => staff
-		$conn = mysqli_connect("server1", "vdwbqkap_wp607", "Ssm821115@", "vdwbqkap_Press Release");
+		$conn = mysqli_connect("localhost:3306", "vdwbqkap_wp607", "Ssm821115@", "Pressrelease");
 		
 		// Check connection
 		if($conn === false){
